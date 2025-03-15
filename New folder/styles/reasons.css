@@ -1,0 +1,61 @@
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.reason {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+.reason.special {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ffebee, #fff);
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 25px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.reason:nth-child(3n) {
+    animation: float 6s ease-in-out infinite;
+}
+
+.reason:nth-child(3n+1) {
+    animation: float 7s ease-in-out infinite;
+}
+
+.reason:nth-child(3n+2) {
+    animation: float 8s ease-in-out infinite;
+}
